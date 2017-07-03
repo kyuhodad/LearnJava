@@ -10,10 +10,42 @@
           }
       }
       ```
-    - Structure
-      
-    - Variables
+    - Structure : 
       ```
-      boolean bTrueOrFalse;
+      block {
+      }
+        public class MyClass {
+        }
+        if (condition) {
+        }
+          
+      statement ;
+        int a = 10;
+        a = a + 20;
+      ```
+    - Variables : Storage to hold specific type of value 
+      Primitive Types & String
+      ```
+      boolean   trueOrFalse;    // true or flase
+      char      letter;         // 16-bit Unicode character.
+      byte      veryShortNumber;// 8-bit signed integer. [-128, 127]
+      short     shorNumber;     // 16-bit signed integer. [-32,768, 32,767]
+      int       number;         // 32-bit signed number. [-2^31, 2^31 - 1]
+      long      longNumber;     // 64-bit signed number. [-2^63, 2^63 - 1]
+      float     shortReal;      // 32-bit floating point. (Do not use it for precise calculation)
+      double    real;           // 64-bit floating point.
+      
+      String    name = "KyeongHwi";
+      ```
+    - Array : Indexed storage holding a fixed number of same type variables (elements).
+      ```
+      int[] numberArray;    // Decleration
+      
+      numberArray = new int[10];    // Creates an array for 10 integers. Valid index range [0,9]
+      numberArray[0] = 10;          // Assign 10 to the first element of the array.
+      numberArray[9] = 5;           // Assign 5 to the last element of the array.
+      System.out.println ("First Element Value = " + numberArray[0]);
+      System.out.println ("First plus last Element Value = " + (numberArray[0] + numberArray[9]));
       
       ```
+      
