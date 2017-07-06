@@ -1,8 +1,17 @@
 # Leraning Java Programing
 
 1. Basics
-    - Referece : [Oracle Java Language Basics](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html)
-    - Starts program
+    - Referece :
+        - [Oracle Java Language Basics](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html)
+        - [Java Tutorial](https://www.tutorialspoint.com/java/index.htm)
+    - Structure & Naming: 
+        - Case Sensitive
+        - Class Name : Start with Upper Case
+        - Variable & methods : Start with Lower Case
+        - One main() method : `public static void main(String[] args)`
+        - Same File and Class name. File extension is `.java`.
+       
+       
       ```
       public class HelloWorldApp {
           public static void main(String[] args) {
@@ -10,7 +19,6 @@
           }
       }
       ```
-    - Structure : 
       ```
       block {
       }
