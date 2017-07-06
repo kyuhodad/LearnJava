@@ -19,18 +19,20 @@
           }
       }
       ```
-      ```
-      block {
-      }
-        public class MyClass {
-        }
-        if (condition) {
-        }
-          
-      statement ;
+        - statement ;
+        ```
         int a = 10;
         a = a + 20;
-      ```
+        ```
+        
+        - block { statement; ... }
+        ```
+        public class MyClass {
+        }
+        
+        if (condition) {
+        }
+        ```
     - Variables : Storage to hold specific type of value 
       Primitive Types & String
       ```
