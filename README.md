@@ -92,4 +92,8 @@
       }
       
       ```        
-      
+     - Variable types
+        - Local variable
+        - Class variable
+        - Instance/Static variable
+     
