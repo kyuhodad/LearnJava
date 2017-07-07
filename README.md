@@ -97,4 +97,35 @@
         - Class variable
         - Instance/Static variable
      - Homework1
-        - 
+        - Ascii draw
+        ```
+        public class HelloWorld{
+            static void draw (boolean[][] grid) {
+                int nHeight = grid.length;
+                int nWidth  = grid[0].length;
+                char[] line = new char[2*nWidth];
+                for(int y=0; y<nHeight; y++) {
+                    for(int x=0; x<nWidth; x++) {
+                        line[2*x] = grid[x][y] ? '@' : ' ';
+                        line[2*x+1] = ' ';
+                    }
+                    System.out.println(line);
+                }
+            }
+            public static void main(String []args){
+                System.out.println("Hello World");
+
+                boolean[][] drawingGrid = new boolean[32][32];
+
+                for (int y=0; y<drawingGrid.length; y++) {
+                    int xVal = (int)(Math.sqrt((double)y) + 0.5);
+                    for (int x=0; x<drawingGrid[y].length; x++) {
+                        drawingGrid[x][y] = (x*x == y);
+                        drawingGrid[x][y] = (xVal == x);
+                        drawingGrid[x][y] = ((x-16)*(x-16) + (y-16)*(y-16) <= 10*10);
+                    }
+                }
+                draw(drawingGrid);
+            }
+        }
+        ```
