@@ -60,7 +60,7 @@
       ```
     - Class : Template to define an object
       ```
-      public class QuadraticFunction {
+      class QuadraticFunction {
         public double a;
         public double b;
         public double c;
@@ -70,9 +70,9 @@
           c = 0.0;
         }
         public QuadraticFunction (double a, double b, double c) {
-          self.a = a;
-          self.b = b;
-          self.c = c;
+          this.a = a;
+          this.b = b;
+          this.c = c;
         }
         public double evaluate(double x) {
           return a*x*x + b*x + c; 
@@ -92,8 +92,9 @@
       }
       
       ```        
-     - Variable types
+     - Variable types (Later)
         - Local variable
         - Class variable
         - Instance/Static variable
-     
+     - Homework1
+        - 
