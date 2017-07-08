@@ -1,8 +1,17 @@
 # Leraning Java Programing
 
 1. Basics
-    - Referece : [Oracle Java Language Basics](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html)
-    - Starts program
+    - Referece :
+        - [Oracle Java Language Basics](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html)
+        - [Java Tutorial](https://www.tutorialspoint.com/java/index.htm)
+    - Structure & Naming: 
+        - Case Sensitive
+        - Class Name : Start with Upper Case
+        - Variable & methods : Start with Lower Case
+        - One main() method : `public static void main(String[] args)`
+        - Same File and Class name. File extension is `.java`.
+       
+       
       ```
       public class HelloWorldApp {
           public static void main(String[] args) {
@@ -10,19 +19,20 @@
           }
       }
       ```
-    - Structure : 
-      ```
-      block {
-      }
-        public class MyClass {
-        }
-        if (condition) {
-        }
-          
-      statement ;
+        - statement ;
+        ```
         int a = 10;
         a = a + 20;
-      ```
+        ```
+        
+        - block { statement; ... }
+        ```
+        public class MyClass {
+        }
+        
+        if (condition) {
+        }
+        ```
     - Variables : Storage to hold specific type of value 
       Primitive Types & String
       ```
@@ -48,4 +58,74 @@
       System.out.println ("First plus last Element Value = " + (numberArray[0] + numberArray[9]));
       
       ```
+    - Class : Template to define an object
+      ```
+      class QuadraticFunction {
+        public double a;
+        public double b;
+        public double c;
+        public QuadraticFunction () {
+          a = 0.0;
+          b = 0.0;
+          c = 0.0;
+        }
+        public QuadraticFunction (double a, double b, double c) {
+          this.a = a;
+          this.b = b;
+          this.c = c;
+        }
+        public double evaluate(double x) {
+          return a*x*x + b*x + c; 
+        }
+      }
+
+      public class MyApp {
+        public static void main(String[] args) {
+          QuadraticFunction quadFunc1 = new QuadraticFunction();
+          System.out.println("quadFunc1(1.0) = " + quadFunc1.evaluate(1.0)); // 0.0
+          quadFunc1.a = 10.0;
+          System.out.println("quadFunc1(1.0) = " + quadFunc1.evaluate(1.0)); // 10.0
+
+          QuadraticFunction quadFunc2 = new QuadraticFunction(1.0, 2.0, 3.0);
+          System.out.println("quadFunc2(2.0) = " + quadFunc2.evaluate(2.0)); // 11.0           
+        }
+      }
       
+      ```        
+     - Variable types (Later)
+        - Local variable
+        - Class variable
+        - Instance/Static variable
+     - Homework1
+        - Ascii draw
+        ```
+        public class HelloWorld{
+            static void draw (boolean[][] grid) {
+                int nHeight = grid.length;
+                int nWidth  = grid[0].length;
+                char[] line = new char[2*nWidth];
+                for(int y=0; y<nHeight; y++) {
+                    for(int x=0; x<nWidth; x++) {
+                        line[2*x] = grid[x][y] ? '@' : ' ';
+                        line[2*x+1] = ' ';
+                    }
+                    System.out.println(line);
+                }
+            }
+            public static void main(String []args){
+                System.out.println("Hello World");
+
+                boolean[][] drawingGrid = new boolean[32][32];
+
+                for (int y=0; y<drawingGrid.length; y++) {
+                    int xVal = (int)(Math.sqrt((double)y) + 0.5);
+                    for (int x=0; x<drawingGrid[y].length; x++) {
+                        drawingGrid[x][y] = (x*x == y);
+                        drawingGrid[x][y] = (xVal == x);
+                        drawingGrid[x][y] = ((x-16)*(x-16) + (y-16)*(y-16) <= 10*10);
+                    }
+                }
+                draw(drawingGrid);
+            }
+        }
+        ```
