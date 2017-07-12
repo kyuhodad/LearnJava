@@ -8,6 +8,8 @@ public class HelloJava {
 		 * Print 'Hello Java!!!'
 		 */
 		System.out.println("Hello Java!!!");
+	
+        Scanner scanner = new Scanner(System.in);
 		
 		/**
 		 * Primitive type variables  
@@ -139,9 +141,8 @@ public class HelloJava {
 		System.out.println("Is 7 between 10 and 20 inclusive? : " + (isTrue1 ? "Yes." : "No."));
 		System.out.println("Is 7 less than 10 or greater tha 20? : " + (isTrue2 ? "Yes." : "No."));
 		
-        Scanner scanner = new Scanner(System.in);
 		
-//		boolean bDone = false;
+		boolean bDone = false;
 //		while (!bDone) {
 //			int number = MyUtilities.inputInt(scanner, "Guess a number: ", 0, 100);
 //			if (number == 0) {
@@ -156,10 +157,31 @@ public class HelloJava {
 		 */
 		
 		// If, else if, else
-		
-		// switch
-		
-		
+		System.out.println("If, else if, else statements.");	
+		bDone = false;
+		while (bDone) {
+			int n4 = MyUtilities.inputInt(scanner, "Enter a number (0 to exit): ", -100, 100);
+			if (n4 < 0) {
+				System.out.println("Entered number, " + n4 + ", is less than 0.");
+			} else if (n4 == 0) {
+				System.out.println("Entered number, " + n4 + ", is 0.");
+			} else {
+				System.out.println("Entered number, " + n4 + ", is greater than 0.");
+			}
+		}
+		System.out.println("");	
+	
+		System.out.println("if (condition) ==> condition should be a boolean value.");	
+		isTrue1 = (n1 + n2)*(n1 + n2) == (n1*n1 + 2*n1*n2 + n2*n2);
+		isTrue2 = (n1*n1*n1 + n2*n2*n2) == (n1 + n2)*(n1*n1 - n1*n2 + n2*n2);
+		if (isTrue1) {
+			System.out.println("(x + y)^2 = x^2 + 2xy + y^2");
+		}
+		if (isTrue2) {
+			System.out.println("x^3 + y^3 = (x + y)(x^2 - xy + y^2");
+		}
+		System.out.println("");	
+	
 		
 		/*
 		 *  Loops
