@@ -1,6 +1,6 @@
-<details> 
-<summary> Input number </summary>
-<pre>
+
+- Input number
+```
 class MyInput {
     static int inputIntNumber (String message, int minValue, int maxValue) {
         
@@ -76,12 +76,9 @@ public class MyParser {
         System.out.println("Bye World");
     }
 }
-</pre>
-</details> 
-
-<details>
-<summary> String pattern search </summary>
-<pre>
+```
+- String pattern search
+```
 public class HelloWorld
 {
     public static void main(String[] args)
@@ -140,12 +137,9 @@ public class MyPatternSearch {
         return idxStartMatching;
     }
 }
-</pre>
-</details>
-
-<details>
-<summary>Anonimous class</summary>
-<pre>
+```
+- Anonymous class
+```
 public class HelloWorld
 {
     public static void main(String[] args)
@@ -176,7 +170,6 @@ public class MyParser {
         return Double.valueOf(expr);
     }
 }
-</pre>
-</details>
+```
 
 
