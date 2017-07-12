@@ -42,37 +42,6 @@ public class HelloWorld{
         
         int num = MyInput.inputIntNumber ("Type a number between 0 and 100:", 0, 100);
         System.out.println("Input number is " + num + "!!!");
-        public class HelloWorld
-{
-    public static void main(String[] args)
-    {
-        System.out.println("Eval1 = " + HelloWorld.eval1("123.456"));
-        System.out.println("Eval2 = " + HelloWorld.eval2("123.456"));
-        System.out.println("Eval3 = " + HelloWorld.eval3("123.456"));
-    }
-    
-    public static double eval1(String expression) {
-        MyParser parser = new MyParser();
-        return parser.parse(expression);
-    }
-    public static double eval2(String expression) {
-        return new MyParser().parse(expression);
-    }
-    public static double eval3(String expression) {
-        return new Object() {
-            double parse(String expr) {
-                return Double.valueOf(expr);
-            }
-        }.parse(expression);
-    }
-}
-
-public class MyParser {
-    double parse(String expr) {
-        return Double.valueOf(expr);
-    }
-}
-
         System.out.println("Bye World");
     }
 }
