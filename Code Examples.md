@@ -49,3 +49,65 @@ public class HelloWorld{
      }
 }
 ```
+
+- String patter search
+```
+public class HelloWorld
+{
+  public static void main(String[] args)
+  {
+	String testString = 
+      "Pages you view in incognito tabs won’t stick around in your browser’s history, " + 
+      "cookie store, or search history after you’ve closed all of your incognito tabs. " + 
+      "Any files you download or bookmarks you create will be kept. However, you aren’t " + 
+      "invisible. Going incognito doesn’t hide your browsing from your employer, " + 
+      "your internet service provider, or the websites you visit.";
+    
+    MyPatternSearch myPatternSearch = new MyPatternSearch(testString);
+    
+    myPatternSearch.search("lee");
+    myPatternSearch.search("to ta");
+    myPatternSearch.search("web");
+    myPatternSearch.search("in");
+  }
+}
+
+public class MyPatternSearch {
+  private String mString = "";
+  MyPatternSearch (String strToTest) {
+    mString = new String(strToTest);
+  }
+  
+  int search(String strToSearch) {
+    if (strToSearch.isEmpty()) {
+      return -1;
+    }
+    
+    int idxStartMatching = -1;
+    int currentIdxToMatch = 0;
+    for (int i=0; i<mString.length(); i++) {
+      char chFromTargetString = mString.charAt(i);
+      char chFromInputString  = strToSearch.charAt(currentIdxToMatch);
+      if (chFromTargetString == chFromInputString) {
+        if (idxStartMatching == -1) {
+          idxStartMatching = i;
+        }
+        currentIdxToMatch++;
+        if (currentIdxToMatch == strToSearch.length()) {
+          break;
+        }
+      } else {
+        currentIdxToMatch = 0;
+        idxStartMatching = -1;
+      }
+    }
+    
+    int idxStartMatching2 = mString.indexOf(strToSearch);
+    
+    System.out.println("MySearch = " + idxStartMatching);
+    System.out.println("String   = " + idxStartMatching2);
+    
+    return idxStartMatching;
+  }
+}
+```
