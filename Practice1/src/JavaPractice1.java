@@ -1,6 +1,3 @@
-/**
- * 
- */
 
 /**
  * @author Kyeong Hwi Lee
