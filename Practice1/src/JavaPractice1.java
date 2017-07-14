@@ -1,6 +1,3 @@
-/**
- * 
- */
 
 /**
  * @author Kyeong Hwi Lee
@@ -47,8 +44,16 @@ public class JavaPractice1 {
 		/**
 		 * 3. Find the sum of numbers(number sum) and cubes of the numbers(cube sum)
 		 * 	- Print the results
-		 *  - Make sure that the square of number sum is cube sum.
 		 */
+		long sum = 0;
+		long sumOfQubes = 0;
+		for (int i=0; i<numberArray.length; i++) {
+			sum += numberArray[i];
+			sumOfQubes += numberArray[i]*numberArray[i]*numberArray[i];
+		}
+		System.out.println("Sum           = " + sum);
+		System.out.println("Sum of Cubes  = " + sumOfQubes);
+
 
 		/**
 		 * 4. Reverse the array
@@ -56,6 +61,13 @@ public class JavaPractice1 {
 		 *    (ex) { 1, 2, 3, 4, 5 } --> { 5, 4, 3, 2, 1 }
 		 *  - Print the reversed array 
 		 */
+		for (int i=0; i<numberArray.length/2; i++) {
+			int saved = numberArray[i];
+			numberArray[i] = numberArray[numberArray.length - i - 1];
+			numberArray[numberArray.length - i - 1] = saved;
+		}
+		printArray(numberArray, "Number Array", 5);
+		
 	}
 
 	private static void printArray(int[] numberArray, String title, int numberOfItemPerLine) {
