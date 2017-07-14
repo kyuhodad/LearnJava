@@ -206,7 +206,7 @@ public class HelloJava {
 //		System.out.println("");	
 				
 		/*
-		 *  Assignment
+		 *  Some pratices
 		 */
 		
 		/**
