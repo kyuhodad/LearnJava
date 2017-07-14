@@ -83,7 +83,7 @@ public class MyUtilities {
      */
 	static int nextInt(int minValue, int maxValue) {
 		double t = Math.random();
-		int value = (int)Math.round(((double)minValue) * (1.0 - t) + (double)maxValue * t);
+		int value = (int)Math.floor(((double)minValue) * (1.0 - t) + (double)maxValue * t);
 		return value;
 	}
 	
