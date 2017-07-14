@@ -21,19 +21,20 @@ public class JavaPractice1 {
 		 */
 		
 		/**
-		 * 2. Find two greatest values and two smallest values in the array
+		 * 2. Find the greatest and smallest value in the array
 		 * 	- Print the numbers and array indices of the numbers 
 		 */
 
 		/**
 		 * 3. Find the sum of numbers(number sum) and cubes of the numbers(cube sum)
 		 * 	- Print the results
-		 *  - Make sure that the square of number sum is cube sum.
 		 */
 
 		/**
 		 * 4. Reverse the array
-		 * 	- Print reversed array 
+		 * 	- Make the array in reversed order.
+		 *    (ex) { 1, 2, 3, 4, 5 } --> { 5, 4, 3, 2, 1 }
+		 *  - Print the reversed array 
 		 */
 	}
 
