@@ -21,7 +21,6 @@ public class AsciiDrawApp {
          * Fill up the array & draw it.
          */
         for (int y=0; y<drawingGrid.length; y++) {
-            int xVal = (int)(Math.sqrt((double)y) + 0.5);
             for (int x=0; x<drawingGrid[y].length; x++) {
                 drawingGrid[y][x] = (y <= x);
             }
