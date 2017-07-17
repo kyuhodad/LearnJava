@@ -55,6 +55,16 @@
       
       String    name = "KyeongHwi";
       ```
+     - Output : Print message to the screen
+     ```
+        System.out.println("Hello Java!");
+        String name = "Kyle";
+        System.out.println("My Name is " + name + ".");
+        int numberOfFloor = 102;
+        System.out.println("The number of floors in Empire State Building is " + numberOfFloor);       
+        int number1 = 10, number2 = 21;
+        System.out.println(number1 + " + " + number2 + " = " + (number1 + number2));       
+     ```
     - Array : Indexed storage holding a fixed number of same type variables (elements).
       ```
       int[] numberArray;    // Decleration
@@ -65,7 +75,7 @@
       System.out.println ("First Element Value = " + numberArray[0]);
       System.out.println ("First plus last Element Value = " + (numberArray[0] + numberArray[9]));
       
-      ```
+      ```    
      - Practice
         - Ascii draw
         ```
@@ -91,8 +101,6 @@
                     int xVal = (int)(Math.sqrt((double)y) + 0.5);
                     for (int x=0; x<drawingGrid[y].length; x++) {
                         drawingGrid[x][y] = (x*x == y);
-                        drawingGrid[x][y] = (xVal == x);
-                        drawingGrid[x][y] = ((x-16)*(x-16) + (y-16)*(y-16) <= 10*10);
                     }
                 }
                 draw(drawingGrid);
