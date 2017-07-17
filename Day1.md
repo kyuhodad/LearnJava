@@ -100,7 +100,7 @@
                 for (int y=0; y<drawingGrid.length; y++) {
                     int xVal = (int)(Math.sqrt((double)y) + 0.5);
                     for (int x=0; x<drawingGrid[y].length; x++) {
-                        drawingGrid[x][y] = (x*x == y);
+                        drawingGrid[x][y] = (y <= x);
                     }
                 }
                 draw(drawingGrid);
