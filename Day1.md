@@ -1,5 +1,13 @@
 # Leraning Java Programing
 
+0. Preparations
+    - Languages : C, C++, **Java**, Python, JavaScript, ObjectC, Swift,...
+    - IDE (Integrated Development Environment)
+    - [Download Java] (http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+        - JDK : Java SE Development Kit (Java SE 8)
+    - [Download Eclipse IDE] (http://www.eclipse.org/downloads/eclipse-packages/)
+    - Starts eclipse & makes a HelloJava project.
+    
 1. Basics
     - Referece :
         - [Oracle Java Language Basics](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html)
@@ -58,45 +66,7 @@
       System.out.println ("First plus last Element Value = " + (numberArray[0] + numberArray[9]));
       
       ```
-    - Class : Template to define an object
-      ```
-      class QuadraticFunction {
-        public double a;
-        public double b;
-        public double c;
-        public QuadraticFunction () {
-          a = 0.0;
-          b = 0.0;
-          c = 0.0;
-        }
-        public QuadraticFunction (double a, double b, double c) {
-          this.a = a;
-          this.b = b;
-          this.c = c;
-        }
-        public double evaluate(double x) {
-          return a*x*x + b*x + c; 
-        }
-      }
-
-      public class MyApp {
-        public static void main(String[] args) {
-          QuadraticFunction quadFunc1 = new QuadraticFunction();
-          System.out.println("quadFunc1(1.0) = " + quadFunc1.evaluate(1.0)); // 0.0
-          quadFunc1.a = 10.0;
-          System.out.println("quadFunc1(1.0) = " + quadFunc1.evaluate(1.0)); // 10.0
-
-          QuadraticFunction quadFunc2 = new QuadraticFunction(1.0, 2.0, 3.0);
-          System.out.println("quadFunc2(2.0) = " + quadFunc2.evaluate(2.0)); // 11.0           
-        }
-      }
-      
-      ```        
-     - Variable types (Later)
-        - Local variable
-        - Class variable
-        - Instance/Static variable
-     - Homework1
+     - Practice
         - Ascii draw
         ```
         public class HelloWorld{
