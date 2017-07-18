@@ -17,7 +17,7 @@ public class AsciiDrawApp {
         
         /**
          * Fill up the array & draw it.
-         *  (1) y <= x
+         *  (1) y <= x 
          *  (2) Math.abs(x) + Math.abs(y-16) <= 10 
         **/
         
