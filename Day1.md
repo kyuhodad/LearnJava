@@ -1,4 +1,4 @@
-# Leraning Java Programing
+# Learning Java Programing
 
 0. Preparations
     - Languages : C, C++, **Java**, Python, JavaScript, ObjectC, Swift,...
