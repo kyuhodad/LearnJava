@@ -68,6 +68,27 @@ public class JavaPractice1 {
 		}
 		printArray(numberArray, "Number Array", 5);
 		
+		/**
+		 * 5. Make another array and store the remainders (divided by 5) of the original array numbers.
+		 *	- Print the new array. 
+		 * 	  (ex) { 12, 34, 57, 73, 28 } --> { 2, 4, 2, 3, 3 }
+		 */
+		int [] mod5NumberArray = new int[numberArray.length];
+		for (int i=0; i<numberArray.length; i++) {
+			mod5NumberArray[i] = numberArray[i] % 5;
+		}
+		printArray(mod5NumberArray, "Mod5 Number Array", 5);
+		
+		/**
+		 * 6. Shift (circular way) the element location by 5 and print it.
+		 * 	  (ex)  { 1, 2, 3, 4, 5, 6, 7, 8 } --> { 4, 5, 6, 7, 8, 1, 2, 3 }
+		 */
+		int [] shiftedNumberArray = new int[numberArray.length];
+		for (int i = 0; i<numberArray.length; i++) {
+			shiftedNumberArray[(i+5)%numberArray.length] = numberArray[i];
+		}
+		printArray(shiftedNumberArray, "Shifted Number Array", 5);
+		
 	}
 
 	private static void printArray(int[] numberArray, String title, int numberOfItemPerLine) {
