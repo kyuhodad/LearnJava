@@ -53,16 +53,41 @@ public class AsciiDrawApp {
             	// drawingGrid[y][x] = (y <= x);
             	
             	// (2) Diamond: |x-16| + |y-16| <= 10
-                drawingGrid[y][x] = (Math.abs(x-16) + Math.abs(y-16) <= 10);
+                //drawingGrid[y][x] = (Math.abs(x-16) + Math.abs(y-16) <= 10);
                 
                 // TODO - (1) Draw a filled square (size 12 x 12) at center
+                //drawingGrid[y][x] = (Math.abs(x - 16) < 6) && (Math.abs(y - 16) < 6);
                 
 				// TODO - (2) Fill the inside of diamond (shown in the code) and outside of the square (1)
+            	boolean bInSideOfDiamond = Math.abs(x-16) + Math.abs(y-16) <= 10;
+            	boolean bInSideOfSquare = (Math.abs(x - 16) < 6) && (Math.abs(y - 16) < 6);
+                //drawingGrid[y][x] = bInSideOfDiamond && !bInSideOfSquare;
                 
 				// TODO - (3) Draw every other horizontal line.
+            	boolean bEveryOtherHorizontalLine = y % 2 == 1;
+                //drawingGrid[y][x] = bEveryOtherHorizontalLine;
                 
 				// TODO - (4) Draw every other horizontal line, but do not draw inside of the diamond.
-           }
+                //drawingGrid[y][x] = bEveryOtherHorizontalLine && !bInSideOfSquare;
+                
+                
+                // EXTRA:
+                double dX = (double)(x-16), dY = (double)(y);
+                boolean bInTriangle1 = 	(dY < 32.0 + Math.sqrt(3.0)*dX) && 
+										(dY < 32.0 - Math.sqrt(3.0)*dX) && (dY > 8.0); 
+				boolean bInTriangle2 = 	(dY >  Math.sqrt(3.0)*dX) &&
+										(dY > -Math.sqrt(3.0)*dX) && (dY < 24.0);
+//                double dSqrt3X = Math.sqrt(3.0)*dX;
+//                boolean bInTriangle1 = 	(dY < 32.0 + dSqrt3X) && 
+//                						(dY < 32.0 - dSqrt3X) && (dY > 8.0); 
+//                boolean bInTriangle2 = 	(dY >  dSqrt3X) &&
+//                						(dY > -dSqrt3X) && (dY < 24.0);
+				
+                drawingGrid[y][x] = bInTriangle1 != bInTriangle2;
+//                drawingGrid[y][x] = bInTriangle1 || bInTriangle2;
+//                drawingGrid[y][x] = bInTriangle1 && bInTriangle2;
+//                drawingGrid[y][x] = bInTriangle1 == bInTriangle2;
+            }
         }
         
         draw(drawingGrid);
