@@ -33,6 +33,12 @@ public class JavaPractice1 {
 		 *    (ex) { 1, 2, 3, 4, 5 } --> { 5, 4, 3, 2, 1 }
 		 *  - Print the reversed array 
 		 */
+		
+		/**
+		 * 5. Make another array and store the remainders (divided by 5) of the original array numbers.
+		 *	- Print the new array. 
+		 * 	  (ex) { 12, 34, 57, 73, 28 } --> { 2, 4, 2, 3, 3 }
+		 */
 	}
 
 }
