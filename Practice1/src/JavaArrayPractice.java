@@ -3,7 +3,7 @@
  * @author Kyeong Hwi Lee
  *
  */
-public class JavaPractice1 {
+public class JavaArrayPractice {
 
 	public static void main(String[] args) {
 		/**
