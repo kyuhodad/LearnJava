@@ -55,30 +55,6 @@ public class QuadraticFunction {
 		
 		// You need to replace following lines with your codes.
 		double [] solutions = null; // null means nothing. Return it if no solution.
-		
-		if (mA == 0) {
-			if (mB == 0) {
-				return null;
-			} else {
-				solutions = new double[1];
-				solutions[0] = mC/mB;
-				return solutions;
-			}
-		}
-		
-		double D = mB*mB - 4*mA*mC;
-		if (D == 0) {
-			solutions = new double[1];
-			solutions[0] = -mB / (2.0 * mA);
-		} else if (D < 0) {
-			return null;
-		} else {
-			solutions = new double[2];
-			double sqrtD = Math.sqrt(D);
-			solutions[0] = (-mB + sqrtD) / (2.0 * mA);			
-			solutions[1] = (-mB - sqrtD) / (2.0 * mA);			
-		}
-
 		return solutions; 
 	}
 	

@@ -42,6 +42,7 @@ public class QuadraticEquationApp {
 		
 		System.out.println("");
 		for (int i=0; i<quadFuncArray.length; i++) {
+			// Solve the quadratic equation, and get the results into x.
 			double [] x = quadFuncArray[i].solve();
 			
 			/**
@@ -54,16 +55,7 @@ public class QuadraticEquationApp {
 			 * 		If no solution (x == null) :
 			 * 			There is no real solution.
 			 */
-			System.out.println(quadFuncArray[i].toString() + " = 0");
-			if (x == null || x.length == 0) {
-				System.out.println("There is no real solution.");
-			} else if (x.length == 1) {
-				System.out.println("x = " + x[0]);
-			} else {
-				System.out.println("x[0] = " + x[0]);
-				System.out.println("x[1] = " + x[1]);
-			}
-			System.out.println("");
+			
 		}
 	}
 }
