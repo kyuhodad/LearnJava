@@ -39,8 +39,8 @@ public class QuadraticFunction {
 	 * 			- If there is one solution, return size 1 double array.
 	 * 			- If there are two solutions, return size 2 double array.
 	 * HINT: As you know, the solutions for ax^2 + bx + c = 0 are
-	 * 		 x[0] = ( -b + Math.sqrt(b^2 -4ac) ) / 4ac
-	 * 		 x[1] = ( -b - Math.sqrt(b^2 -4ac) ) / 4ac
+	 * 		 x[0] = ( -b + Math.sqrt(b^2 -4ac) ) / 2a
+	 * 		 x[1] = ( -b - Math.sqrt(b^2 -4ac) ) / 2a
 	 * 	Also, you may know that
 	 * 		b^2 -4ac is less than 0 	=> No solution
 	 * 					zero        	=> One solution
