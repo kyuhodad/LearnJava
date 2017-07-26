@@ -2,19 +2,30 @@
 public class PatternSearchTest {
 
 	public static void main(String[] args) {
-		String basicTestString = "Wecome to Mississippi.";
+		/**
+		 * Basic Search
+		 * 	1. Add a class for text pattern search. (MyPatternSearch)
+		 * 	2. Add some test cases...
+		 */
+		String basicTestString = "Welcome to Mississippi.";
         System.out.println("=====================================");
         System.out.println("Test String   : [" + basicTestString + "]");
         System.out.println("=====================================");
 
         MyPatternSearch myBasicPatternSearch = new MyPatternSearch(basicTestString);
 
-        myBasicPatternSearch.search("is");
-        myBasicPatternSearch.search("came");
-        myBasicPatternSearch.search("ec");
-        myBasicPatternSearch.search("ssi");
-        myBasicPatternSearch.search("sip");
+        int index = myBasicPatternSearch.search("is");
+        System.out.println("Search result = " + index);
+        index = myBasicPatternSearch.search("came");
+        System.out.println("Search result = " + index);       
+        index = myBasicPatternSearch.search("ec");
+        System.out.println("Search result = " + index);
+        index = myBasicPatternSearch.search("ssi");
+        System.out.println("Search result = " + index);
+        index = myBasicPatternSearch.search("sip");
+        System.out.println("Search result = " + index);
 		
+        /*
         String specialTestString = "aaabbaaba";
         MyPatternSearch mySpecailPatternSearch = new MyPatternSearch(specialTestString);
         
@@ -57,6 +68,7 @@ public class PatternSearchTest {
         	String strAfterMatch  = testString.substring(position + stringToSearch.length());
         	System.out.println(strBeforeMatch + "/" + stringToSearch + "/" + strAfterMatch);
         }
+        */
 	}
 
 }
