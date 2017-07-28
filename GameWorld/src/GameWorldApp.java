@@ -30,14 +30,22 @@ public class GameWorldApp {
 			sortedEntires[i] = gameManager.getEntry(i);
 		}
 		
-		// 1. Insertion Sort
+		// 1. Insertion Sort (decreasing order)
+		System.out.println("\nInsertion Sort!!!!");
 		for (int i=1; i<numEntries; i++) {
 			GameEntry current = sortedEntires[i];
+			int insertionPosition = i;
 			for (int j=i-1; j >= 0; j--) {
-				if (sortedEntires[j].getScore() > current.getScore()) {
+				if (sortedEntires[j].getScore() < current.getScore()) {
 					sortedEntires[j+1] = sortedEntires[j];
-					sortedEntires[j] = current;
+					insertionPosition = j;
+				} else {
+					break;
 				}
+			}
+			
+			if (insertionPosition != i) {
+				sortedEntires[insertionPosition] = current;
 			}
 		}
 		
@@ -45,8 +53,31 @@ public class GameWorldApp {
 			GameEntry entry = sortedEntires[i];
 			System.out.println("[" + i + "] " + entry.toString());
 		}
+
+		// Reassign original entry list
+		for (int i=0; i<numEntries; i++) {
+			sortedEntires[i] = gameManager.getEntry(i);
+		}
 		
 		// 2. Bubble sort
+		System.out.println("\nBubble Sort!!!!");
+		boolean swapped;
+		do {
+			swapped = false;
+			for (int i=0; i<sortedEntires.length-1; i++) {
+				if (sortedEntires[i].getScore() < sortedEntires[i+1].getScore()) {
+					GameEntry temp = sortedEntires[i];
+					sortedEntires[i] = sortedEntires[i+1];
+					sortedEntires[i+1] = temp;
+					swapped = true;
+				}
+			}
+		} while (swapped);
+
+		for (int i=0; i<numEntries; i++) {
+			GameEntry entry = sortedEntires[i];
+			System.out.println("[" + i + "] " + entry.toString());
+		}
 		
 	}
 
