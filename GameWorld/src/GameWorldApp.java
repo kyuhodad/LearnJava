@@ -24,7 +24,8 @@ public class GameWorldApp {
 			GameEntry entry = gameManager.getEntry(i);
 			System.out.println("[" + i + "] " + entry.toString());
 		}
-		
+			
+		numEntries = gameManager.getNumberOfEntries();
 		GameEntry [] sortedEntires = new GameEntry [numEntries];
 		for (int i=0; i<numEntries; i++) {
 			sortedEntires[i] = gameManager.getEntry(i);
@@ -49,6 +50,7 @@ public class GameWorldApp {
 			}
 		}
 		
+		numEntries = gameManager.getNumberOfEntries();
 		for (int i=0; i<numEntries; i++) {
 			GameEntry entry = sortedEntires[i];
 			System.out.println("[" + i + "] " + entry.toString());
