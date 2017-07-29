@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class GameManager {
 	/**
@@ -28,6 +29,30 @@ public class GameManager {
 		return entries[index];
 	}
 	
+	public GameEntry [] getSortedEntries () {
+		GameEntry [] sortedEntries = Arrays.copyOfRange(entries, 0, numberOfEntry);
+				
+		boolean swapped;
+		do {
+			swapped = false;
+			for (int i=0; i<sortedEntries.length-1; i++) {
+				if (sortedEntries[i].getScore() < sortedEntries[i+1].getScore()) {
+					GameEntry temp = sortedEntries[i];
+					sortedEntries[i] = sortedEntries[i+1];
+					sortedEntries[i+1] = temp;
+					swapped = true;
+				}
+			}
+		} while (swapped);
+		
+		return sortedEntries;
+	}
+
+	public GameEntry [] getTop5 () {
+		GameEntry [] sortedEntries = getSortedEntries();
+		return Arrays.copyOfRange(sortedEntries, 0, 5);
+	}
+	
 	public void add (GameEntry entry) {
 		if (numberOfEntry < entries.length) {
 			entries[numberOfEntry] = entry;	
@@ -40,6 +65,7 @@ public class GameManager {
 		for (int i = index+1; i<numberOfEntry; i++) {
 			entries[i-1] = entries[i];
 		}
+		numberOfEntry--;
 		return entryToRemove;
 	}
 	
